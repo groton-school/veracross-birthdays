@@ -56,16 +56,24 @@ export async function formattedName(
       '{first_name.initial}',
       person.first_name
         .split(' ')
-        .map((n) => `${n.substring(0, 1)}.`)
+        .map((n) => `${n[0]}.`)
 
         .join(' ')
+        .replace(
+          '{middle_name.initial}',
+          (person.middle_name || '')
+            .split(' ')
+            .map((n) => `${n[0]}.`)
+            .join(' ')
+        )
     )
+    .replace('{middle_name}', person.middle_name || '')
     .replace('{first_name}', person.first_name)
     .replace(
       '{last_name.initial}',
       person.last_name
         .split(' ')
-        .map((n) => `${n.substring(0, 1)}.`)
+        .map((n) => `${n[0]}.`)
         .join(' ')
     )
     .replace('{last_name}', person.last_name)
