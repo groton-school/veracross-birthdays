@@ -1,0 +1,9 @@
+allowBuilds:
+  protobufjs: true
+minimumReleaseAgeExclude:
+  - '@oauth2-cli/veracross@0.2.3'
+publicHoistPattern:
+  - '*prettier*'
+  - '*eslint*'
+  - '@commitlint/*'
+  - commit-and-tag-version
