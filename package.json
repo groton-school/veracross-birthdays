@@ -1,6 +1,7 @@
 {
   "name": "@groton/veracross-birthdays",
   "version": "1.0.0",
+  "description": "Configurable birthday calendar feed for Veracross",
   "license": "GPL-3.0",
   "author": {
     "name": "Seth Battis",
