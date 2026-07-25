@@ -1,10 +1,12 @@
 import { DateTime } from 'luxon';
 import { formattedName, Person } from './formattedName.js';
 
+type DateTuple = [number, number, number];
+
 export type SimpleAttribute = {
   title: string;
-  start: [number, number, number];
-  end: [number, number, number];
+  start: DateTuple;
+  end: DateTuple;
   recurrenceRule: string;
 };
 
