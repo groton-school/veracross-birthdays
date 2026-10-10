@@ -116,6 +116,8 @@ await gcloud.batch.run.deployService({
   args: {
     source: '.',
     'base-image': 'nodejs22',
+    'max-instances': 1,
+    concurrency: 80,
     'allow-unauthenticated': true,
     'set-secrets': `${PATH_TO_VERACROSS_CREDENTIALS}=${VERACROSS_CREDENTIALS}:latest`,
     'set-env-vars': 'CI=TRUE' // run pnpm non-interactively
