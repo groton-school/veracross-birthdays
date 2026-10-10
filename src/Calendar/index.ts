@@ -100,7 +100,7 @@ export async function calendar({
           collapsed[i].start[1] === config.start[1] &&
           collapsed[i].start[2] === config.start[2]
         ) {
-          collapsed[i].title = `${collapsed[i].title}, ${config.title}`;
+          collapsed[i].title = `${collapsed[i].title}\n${config.title}`;
           inserted = true;
         }
       }
